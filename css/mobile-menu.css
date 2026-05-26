@@ -1,0 +1,133 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  padding: 0;
+  cursor: pointer;
+  fill: var(--navy-blue);
+  transition:
+    background-color var(--transition-dur-func),
+    border-color var(--transition-dur-func),
+    fill var(--transition-dur-func);
+}
+
+.mobile-menu-close-btn:hover,
+.mobile-menu-close-btn:focus {
+  background-color: var(--ocean);
+  border-color: var(--ocean);
+  fill: var(--white);
+}
+
+.mobile-nav {
+  margin-bottom: auto;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-nav-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  text-decoration: none;
+  transition: color var(--transition-dur-func);
+}
+
+.mobile-nav-link.current {
+  color: var(--ocean);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: var(--ocean);
+}
+
+.mobile-address {
+  font-style: normal;
+  margin-bottom: 48px;
+}
+
+.mobile-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-contact-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  text-decoration: none;
+  transition: color var(--transition-dur-func);
+}
+
+.mobile-contact-link.phone {
+  color: var(--iris);
+}
+
+.mobile-contact-link:hover,
+.mobile-contact-link:focus {
+  color: var(--ocean);
+}
+
+.mobile-social-list {
+  display: flex;
+  gap: 40px;
+}
+
+.mobile-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}

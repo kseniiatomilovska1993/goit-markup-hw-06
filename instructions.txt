@@ -1,0 +1,37 @@
+
+All styles are written in their respective files, which are located in the folder  cssand are correctly connected.
+The file names do not contain Cyrillic characters or spaces. The names contain only letters, numbers, and English words.
+When viewing the page on any device with a width of  320px, the horizontal scroll bar does not appear.
+The source code is formatted using Prettier
+All images and text content are taken from the layout
+Plugged in style normalizer  modern-normalize(minified version)
+The code is written in accordance with  the guidelines
+
+
+Responsiveness and adaptability
+
+<head> There is a meta tag  on the page in the block viewport
+The layout is made with respect to three break points:  320px,  768px and 1158px
+All background and content bitmap images are responsive and support screens with densities  x1 of x2
+Media function used for responsive background images min-resolution
+Mobile First The approach and media function  used when writing styles min-width
+Styles that are only needed within a certain range are wrapped in media queries  (min-width: ) and (max-width: ) or only (max-width: )
+There is no unnecessary duplication of styles in media queries
+To implement responsive graphics, use src + srcset (note: not picture + source + img)
+
+
+Mobile menu
+
+The mobile menu should be implemented in separate markup after the footer
+All mobile menu elements in the file have been designed.mobile-menu.css
+The width and height of the menu takes up the entire viewport.
+The menu is initially hidden.
+If you add a class to a menu item  is-open, it appears
+
+
+Stylization
+
+The formation of the header height for mobile phones is performed by vertical padding on the logo.
+The Hero section has separate backgrounds for mobile (up to 320px), tablet (up to 768px), and desktop (up to 1440px), each in versions @1xand@2x
+In the "Our Team" section, cards have a fixed width 264pxon all screens (mobile, tablet, desktop)
+Portfolio card overlay should be full width
